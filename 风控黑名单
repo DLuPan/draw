@@ -1,1 +1,65 @@
-<mxfile host="app.diagrams.net" modified="2020-03-24T06:36:19.780Z" agent="Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/74.0.3729.131 Safari/537.36" version="12.8.5" etag="Llwm9pT8YvMhh5b3aWYz" type="github"><diagram id="5p7xWZzYrQ8SCmbM2FUb">UzV2zq1wL0osyPDNT0nNUTV2VTV2LsrPL4GwciucU3NyVI0MMlNUjV1UjYwMgFjVyA2HrCFY1qAgsSg1rwSLBiADYTaQg2Y1AA==</diagram></mxfile>
+<mxfile host="app.diagrams.net" modified="2020-03-25T01:32:36.537Z" agent="Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/74.0.3729.131 Safari/537.36" etag="9GiyAVxzLJzugU3yg-3i" version="12.8.5" type="github">
+  <diagram id="5p7xWZzYrQ8SCmbM2FUb" name="Page-1">
+    <mxGraphModel dx="1422" dy="706" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="X6aYGYcY2yyYaR7h8l4u-27" value="" style="endArrow=classic;html=1;" edge="1" parent="1">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="489.66" y="680" as="sourcePoint" />
+            <mxPoint x="489.66" y="900" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="X6aYGYcY2yyYaR7h8l4u-2" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="X6aYGYcY2yyYaR7h8l4u-1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="115" y="870" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="X6aYGYcY2yyYaR7h8l4u-1" value=".preloanReport" style="rounded=1;whiteSpace=wrap;html=1;shadow=0;fillColor=#fff2cc;strokeColor=#d6b656;" vertex="1" parent="1">
+          <mxGeometry x="60" y="300" width="110" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="X6aYGYcY2yyYaR7h8l4u-4" value="XXXOperator" style="rounded=1;whiteSpace=wrap;html=1;shadow=0;fillColor=#fff2cc;strokeColor=#d6b656;" vertex="1" parent="1">
+          <mxGeometry x="320" y="300" width="110" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="X6aYGYcY2yyYaR7h8l4u-15" value="" style="shape=singleArrow;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="130" y="385" width="230" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="X6aYGYcY2yyYaR7h8l4u-16" value="XXXSubmit" style="rounded=1;whiteSpace=wrap;html=1;shadow=0;fillColor=#fff2cc;strokeColor=#d6b656;" vertex="1" parent="1">
+          <mxGeometry x="570" y="300" width="110" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="X6aYGYcY2yyYaR7h8l4u-17" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" source="X6aYGYcY2yyYaR7h8l4u-16" parent="1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="625.0000000000002" y="870" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="X6aYGYcY2yyYaR7h8l4u-18" value="租车异步调用" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="190" y="380" width="100" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="X6aYGYcY2yyYaR7h8l4u-19" value="租购同步调用" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="190" y="440" width="100" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="X6aYGYcY2yyYaR7h8l4u-20" value="" style="shape=singleArrow;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="390" y="765" width="200" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="X6aYGYcY2yyYaR7h8l4u-21" value="调用第三方获取结果" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="425" y="740" width="130" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="X6aYGYcY2yyYaR7h8l4u-23" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="X6aYGYcY2yyYaR7h8l4u-4">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="370" y="870" as="targetPoint" />
+            <mxPoint x="375.0000000000002" y="330" as="sourcePoint" />
+            <Array as="points">
+              <mxPoint x="370" y="505" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="X6aYGYcY2yyYaR7h8l4u-24" value="处理请求数据&lt;br&gt;处理三方响应数据&lt;br&gt;入库+处理响应数据" style="ellipse;whiteSpace=wrap;html=1;aspect=fixed;" vertex="1" parent="1">
+          <mxGeometry x="295" y="530" width="150" height="150" as="geometry" />
+        </mxCell>
+        <mxCell id="X6aYGYcY2yyYaR7h8l4u-28" value="统一Strategy入口" style="rounded=0;whiteSpace=wrap;html=1;shadow=0;" vertex="1" parent="1">
+          <mxGeometry x="440" y="775" width="100" height="40" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
