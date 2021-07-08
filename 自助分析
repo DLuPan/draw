@@ -1,4 +1,4 @@
-<mxfile host="app.diagrams.net" modified="2021-07-08T07:17:06.889Z" agent="5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/91.0.4472.124 Safari/537.36" etag="LHulXVpMa_dhalxVcVrm" version="14.8.4" type="github" pages="2">
+<mxfile host="app.diagrams.net" modified="2021-07-08T07:21:25.026Z" agent="5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/91.0.4472.124 Safari/537.36" etag="u1f8GStTigd6iWnO1z8w" version="14.8.4" type="github" pages="2">
   <diagram id="LIhRvNP0LxU7E7-dgZh5" name="重构方案">
     <mxGraphModel dx="1422" dy="879" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
       <root>
@@ -201,19 +201,31 @@
       <root>
         <mxCell id="TyREVgJkDnOt54mv2A8x-0" />
         <mxCell id="TyREVgJkDnOt54mv2A8x-1" parent="TyREVgJkDnOt54mv2A8x-0" />
-        <mxCell id="Nyqu3aCf-ukNzRzqMCCw-0" value="自助分析search分页缓存策略&lt;br&gt;&lt;span style=&quot;white-space: pre&quot;&gt;	&lt;/span&gt;1、使用Redis作为缓存容器，失效时间为5分钟&lt;br&gt;&lt;span style=&quot;white-space: pre&quot;&gt;	&lt;/span&gt;2、使用异步预加载方式，降低分页数据展示耗时&lt;br&gt;&lt;span style=&quot;white-space: pre&quot;&gt;	&lt;/span&gt;3、提前预加载实现逻辑：&lt;br&gt;&lt;span style=&quot;white-space: pre&quot;&gt;	&lt;/span&gt;&lt;span style=&quot;white-space: pre&quot;&gt;	&lt;/span&gt;a、访问page=1,异步加载page=1,2,3数据&lt;br&gt;&lt;span style=&quot;white-space: pre&quot;&gt;	&lt;/span&gt;&lt;span style=&quot;white-space: pre&quot;&gt;	&lt;/span&gt;b、访问page=2,异步加载page=2,3,4数据（因为page=3数据命中，不执行服务）" style="text;html=1;align=left;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;" vertex="1" parent="TyREVgJkDnOt54mv2A8x-1">
-          <mxGeometry x="-450" y="250" width="500" height="90" as="geometry" />
+        <mxCell id="Nyqu3aCf-ukNzRzqMCCw-0" value="自助分析 Page-Cache缓存策略&lt;br&gt;&lt;span style=&quot;white-space: pre&quot;&gt;	&lt;/span&gt;1、使用Redis作为缓存容器，失效时间为5分钟&lt;br&gt;&lt;span style=&quot;white-space: pre&quot;&gt;	&lt;/span&gt;2、使用异步预加载方式，降低分页数据展示耗时&lt;br&gt;&lt;span style=&quot;white-space: pre&quot;&gt;	&lt;/span&gt;3、提前预加载实现逻辑：&lt;br&gt;&lt;span style=&quot;white-space: pre&quot;&gt;	&lt;/span&gt;&lt;span style=&quot;white-space: pre&quot;&gt;	&lt;/span&gt;a、访问page=1,异步加载page=1,2,3数据&lt;br&gt;&lt;span style=&quot;white-space: pre&quot;&gt;	&lt;/span&gt;&lt;span style=&quot;white-space: pre&quot;&gt;	&lt;/span&gt;b、访问page=2,异步加载page=2,3,4数据（因为page=3数据命中，不执行服务）" style="text;html=1;align=left;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;" vertex="1" parent="TyREVgJkDnOt54mv2A8x-1">
+          <mxGeometry x="-470" y="290" width="500" height="90" as="geometry" />
         </mxCell>
         <mxCell id="Nyqu3aCf-ukNzRzqMCCw-1" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="TyREVgJkDnOt54mv2A8x-1" source="Nyqu3aCf-ukNzRzqMCCw-3" target="Nyqu3aCf-ukNzRzqMCCw-21">
-          <mxGeometry relative="1" as="geometry" />
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="-368" y="497" />
+            </Array>
+          </mxGeometry>
         </mxCell>
         <mxCell id="Nyqu3aCf-ukNzRzqMCCw-2" value="请求" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" vertex="1" connectable="0" parent="Nyqu3aCf-ukNzRzqMCCw-1">
           <mxGeometry x="-0.1538" y="1" relative="1" as="geometry">
             <mxPoint x="15" y="1" as="offset" />
           </mxGeometry>
         </mxCell>
+        <mxCell id="Nyqu3aCf-ukNzRzqMCCw-29" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=1;entryDx=0;entryDy=0;" edge="1" parent="TyREVgJkDnOt54mv2A8x-1" source="Nyqu3aCf-ukNzRzqMCCw-3" target="Nyqu3aCf-ukNzRzqMCCw-22">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="-368" y="660" />
+              <mxPoint x="-111" y="660" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
         <mxCell id="Nyqu3aCf-ukNzRzqMCCw-3" value="Browser" style="html=1;shadow=0;dashed=0;shape=mxgraph.bootstrap.rrect;rSize=5;strokeColor=none;strokeWidth=1;fillColor=#33A64C;fontColor=#FFFFFF;whiteSpace=wrap;align=center;verticalAlign=middle;spacingLeft=0;fontStyle=0;fontSize=16;spacing=5;" vertex="1" parent="TyREVgJkDnOt54mv2A8x-1">
-          <mxGeometry x="-350" y="476.5" width="90" height="40" as="geometry" />
+          <mxGeometry x="-413" y="521.5" width="90" height="40" as="geometry" />
         </mxCell>
         <mxCell id="Nyqu3aCf-ukNzRzqMCCw-4" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="TyREVgJkDnOt54mv2A8x-1" source="Nyqu3aCf-ukNzRzqMCCw-8" target="Nyqu3aCf-ukNzRzqMCCw-11">
           <mxGeometry relative="1" as="geometry" />
@@ -256,35 +268,49 @@
         <mxCell id="Nyqu3aCf-ukNzRzqMCCw-14" value="" style="shape=image;html=1;verticalAlign=top;verticalLabelPosition=bottom;labelBackgroundColor=#ffffff;imageAspect=0;aspect=fixed;image=https://cdn0.iconfinder.com/data/icons/web-development-79/32/development_computer_website_check_result-128.png" vertex="1" parent="TyREVgJkDnOt54mv2A8x-1">
           <mxGeometry x="259.25" y="696.5" width="78" height="78" as="geometry" />
         </mxCell>
-        <mxCell id="Nyqu3aCf-ukNzRzqMCCw-15" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="TyREVgJkDnOt54mv2A8x-1" source="Nyqu3aCf-ukNzRzqMCCw-16" target="Nyqu3aCf-ukNzRzqMCCw-21">
+        <mxCell id="Nyqu3aCf-ukNzRzqMCCw-25" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="TyREVgJkDnOt54mv2A8x-1" source="Nyqu3aCf-ukNzRzqMCCw-16" target="Nyqu3aCf-ukNzRzqMCCw-22">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
         <mxCell id="Nyqu3aCf-ukNzRzqMCCw-16" value="缓存" style="aspect=fixed;html=1;points=[];align=center;image;fontSize=12;image=img/lib/azure2/storage/Azure_HCP_Cache.svg;" vertex="1" parent="TyREVgJkDnOt54mv2A8x-1">
-          <mxGeometry x="50" y="465" width="68" height="63" as="geometry" />
+          <mxGeometry x="50" y="555" width="68" height="63" as="geometry" />
         </mxCell>
-        <mxCell id="Nyqu3aCf-ukNzRzqMCCw-17" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="TyREVgJkDnOt54mv2A8x-1" source="Nyqu3aCf-ukNzRzqMCCw-21" target="Nyqu3aCf-ukNzRzqMCCw-16">
-          <mxGeometry relative="1" as="geometry" />
-        </mxCell>
-        <mxCell id="Nyqu3aCf-ukNzRzqMCCw-18" value="命中返回" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" vertex="1" connectable="0" parent="Nyqu3aCf-ukNzRzqMCCw-17">
-          <mxGeometry x="-0.2297" y="-1" relative="1" as="geometry">
-            <mxPoint x="18" y="-1" as="offset" />
-          </mxGeometry>
-        </mxCell>
-        <mxCell id="Nyqu3aCf-ukNzRzqMCCw-19" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0;entryY=0.21;entryDx=0;entryDy=0;entryPerimeter=0;" edge="1" parent="TyREVgJkDnOt54mv2A8x-1" source="Nyqu3aCf-ukNzRzqMCCw-21" target="Nyqu3aCf-ukNzRzqMCCw-8">
+        <mxCell id="Nyqu3aCf-ukNzRzqMCCw-19" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="TyREVgJkDnOt54mv2A8x-1" source="Nyqu3aCf-ukNzRzqMCCw-21" target="Nyqu3aCf-ukNzRzqMCCw-8">
           <mxGeometry relative="1" as="geometry">
-            <Array as="points">
-              <mxPoint x="-111" y="410" />
-              <mxPoint x="260" y="410" />
-            </Array>
+            <Array as="points" />
+            <mxPoint x="260" y="480" as="targetPoint" />
           </mxGeometry>
         </mxCell>
         <mxCell id="Nyqu3aCf-ukNzRzqMCCw-20" value="异步执行分析服务" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" vertex="1" connectable="0" parent="Nyqu3aCf-ukNzRzqMCCw-19">
           <mxGeometry x="-0.3322" y="1" relative="1" as="geometry">
-            <mxPoint as="offset" />
+            <mxPoint x="75" y="1" as="offset" />
           </mxGeometry>
         </mxCell>
         <mxCell id="Nyqu3aCf-ukNzRzqMCCw-21" value="" style="aspect=fixed;perimeter=ellipsePerimeter;html=1;align=center;shadow=0;dashed=0;spacingTop=3;image;image=img/lib/active_directory/sql_server.svg;" vertex="1" parent="TyREVgJkDnOt54mv2A8x-1">
           <mxGeometry x="-130" y="471.5" width="38.5" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="Nyqu3aCf-ukNzRzqMCCw-24" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="TyREVgJkDnOt54mv2A8x-1" source="Nyqu3aCf-ukNzRzqMCCw-22" target="Nyqu3aCf-ukNzRzqMCCw-16">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="Nyqu3aCf-ukNzRzqMCCw-26" value="命中返回" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" vertex="1" connectable="0" parent="Nyqu3aCf-ukNzRzqMCCw-24">
+          <mxGeometry x="-0.258" relative="1" as="geometry">
+            <mxPoint x="20" as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="Nyqu3aCf-ukNzRzqMCCw-30" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.489;entryY=1.013;entryDx=0;entryDy=0;entryPerimeter=0;" edge="1" parent="TyREVgJkDnOt54mv2A8x-1" source="Nyqu3aCf-ukNzRzqMCCw-22" target="Nyqu3aCf-ukNzRzqMCCw-3">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="-111" y="660" />
+              <mxPoint x="-369" y="660" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="Nyqu3aCf-ukNzRzqMCCw-31" value="命中返回" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" vertex="1" connectable="0" parent="Nyqu3aCf-ukNzRzqMCCw-30">
+          <mxGeometry x="0.0416" y="-1" relative="1" as="geometry">
+            <mxPoint x="33" as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="Nyqu3aCf-ukNzRzqMCCw-22" value="" style="aspect=fixed;perimeter=ellipsePerimeter;html=1;align=center;shadow=0;dashed=0;spacingTop=3;image;image=img/lib/active_directory/sql_server.svg;" vertex="1" parent="TyREVgJkDnOt54mv2A8x-1">
+          <mxGeometry x="-130" y="561.5" width="38.5" height="50" as="geometry" />
         </mxCell>
       </root>
     </mxGraphModel>
