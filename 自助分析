@@ -1,4 +1,4 @@
-<mxfile host="app.diagrams.net" modified="2021-07-08T07:21:25.026Z" agent="5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/91.0.4472.124 Safari/537.36" etag="u1f8GStTigd6iWnO1z8w" version="14.8.4" type="github" pages="2">
+<mxfile host="app.diagrams.net" modified="2021-07-08T07:21:32.515Z" agent="5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/91.0.4472.124 Safari/537.36" etag="Do1oCiE5d4wqfy1h7_w3" version="14.8.4" type="github" pages="2">
   <diagram id="LIhRvNP0LxU7E7-dgZh5" name="重构方案">
     <mxGraphModel dx="1422" dy="879" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
       <root>
@@ -202,7 +202,7 @@
         <mxCell id="TyREVgJkDnOt54mv2A8x-0" />
         <mxCell id="TyREVgJkDnOt54mv2A8x-1" parent="TyREVgJkDnOt54mv2A8x-0" />
         <mxCell id="Nyqu3aCf-ukNzRzqMCCw-0" value="自助分析 Page-Cache缓存策略&lt;br&gt;&lt;span style=&quot;white-space: pre&quot;&gt;	&lt;/span&gt;1、使用Redis作为缓存容器，失效时间为5分钟&lt;br&gt;&lt;span style=&quot;white-space: pre&quot;&gt;	&lt;/span&gt;2、使用异步预加载方式，降低分页数据展示耗时&lt;br&gt;&lt;span style=&quot;white-space: pre&quot;&gt;	&lt;/span&gt;3、提前预加载实现逻辑：&lt;br&gt;&lt;span style=&quot;white-space: pre&quot;&gt;	&lt;/span&gt;&lt;span style=&quot;white-space: pre&quot;&gt;	&lt;/span&gt;a、访问page=1,异步加载page=1,2,3数据&lt;br&gt;&lt;span style=&quot;white-space: pre&quot;&gt;	&lt;/span&gt;&lt;span style=&quot;white-space: pre&quot;&gt;	&lt;/span&gt;b、访问page=2,异步加载page=2,3,4数据（因为page=3数据命中，不执行服务）" style="text;html=1;align=left;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;" vertex="1" parent="TyREVgJkDnOt54mv2A8x-1">
-          <mxGeometry x="-470" y="290" width="500" height="90" as="geometry" />
+          <mxGeometry x="-460" y="280" width="500" height="90" as="geometry" />
         </mxCell>
         <mxCell id="Nyqu3aCf-ukNzRzqMCCw-1" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="TyREVgJkDnOt54mv2A8x-1" source="Nyqu3aCf-ukNzRzqMCCw-3" target="Nyqu3aCf-ukNzRzqMCCw-21">
           <mxGeometry relative="1" as="geometry">
